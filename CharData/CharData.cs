@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace CharData
 {
     
-    public class CharData
+    public class CharData 
     {
         public long lastModified { get; set; }
         public string name { get; set; }
@@ -59,5 +59,6 @@ namespace CharData
             }
             return charData;
         }
+
     }
 }

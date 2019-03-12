@@ -86,6 +86,7 @@ namespace CharData
         {
             CharData CurrentChar;
             string url;
+
             CurrentChar = CharData.getCharacterDescription(ServerComboBox.Text, CharacterTextBox.Text, ACCESS_TOKEN);
             if (CurrentChar == null)
                 return;
@@ -101,6 +102,7 @@ namespace CharData
 
             url = "http://render-us.worldofwarcraft.com/character/" + CurrentChar.thumbnail;
             pictureBox1.ImageLocation = url;
+
             return;
         }
 
