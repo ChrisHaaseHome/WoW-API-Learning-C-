@@ -29,8 +29,9 @@ namespace CharData
         public string name { get; set; }
         public GenderName gender_name { get; set; }
         public Faction faction { get; set; }
-        public string is_selectable { get; set; }
-        public string is_allied_race { get; set; }
+        public bool is_selectable { get; set; }
+        public bool is_allied_race { get; set; }
+
         public static string getRaceFromID(string AccessToken, int RaceID)
         {
             WoWRace WoWRace = null;
