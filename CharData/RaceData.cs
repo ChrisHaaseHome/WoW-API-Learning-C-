@@ -18,7 +18,6 @@ namespace CharData
 
     public class Faction
     {
-        public int id { get; set; }
         public string type { get; set; }
         public string name { get; set; }
     }
@@ -29,12 +28,13 @@ namespace CharData
         public int id { get; set; }
         public string name { get; set; }
         public GenderName gender_name { get; set; }
-        public List<Faction> faction { get; set; }
-
+        public Faction faction { get; set; }
+        public string is_selectable { get; set; }
+        public string is_allied_race { get; set; }
         public static string getRaceFromID(string AccessToken, int RaceID)
         {
             WoWRace WoWRace = null;
-            string address = @"https://us.api.blizzard.com/data/wow/race/" + RaceID + "?namespace=static-us&locale=en_US&access_token=" + AccessToken;
+            string address = @"https://us.api.blizzard.com/data/wow/playable-race/" + RaceID + "?namespace=static-us&locale=en_US&access_token=" + AccessToken;
             address = System.Uri.EscapeUriString(address);
             WebRequest request = WebRequest.Create(address);
             try
